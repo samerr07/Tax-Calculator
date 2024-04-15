@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        
+
+    <div class="container">
+        <h1>Tax Calculator</h1>
+        <form id="tax-form" class="tax-form">
+            <div class="form-group">
+                <label for="gross-income">Gross Annual Income (Rupees):</label>
+                <input type="number" id="gross-income" name="grossIncome" required>
+                <span class="error-icon" data-error="Please enter a valid number"></span>
+            </div>
+            <div class="form-group">
+                <label for="extra-income">Extra Income (Rupees):</label>
+                <input type="number" id="extra-income" name="extraIncome">
+                <span class="error-icon" data-error="Please enter a valid number"></span>
+            </div>
+            <div class="form-group">
+                <label for="deductions">Deductions (Rupees):</label>
+                <input type="number" id="deductions" name="deductions">
+                <span class="error-icon" data-error="Please enter a valid number"></span>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <select id="age" name="age" required>
+                    <option value="">Select Age Group</option>
+                    <option value="<40">Less than 40</option>
+                    <option value=">=40 && <60">40 to 59</option>
+                    <option value=">=60">60 or above</option>
+                </select>
+                <span class="error-icon" data-error="Please select your age group"></span>
+            </div>
+            <button type="submit" class="btn">Calculate Tax</button>
+        </form>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Tax Calculation Result</h2>
+            <p id="tax-amount"></p>
+            <button class="close-button" id="close-modal">Close</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
